@@ -23,3 +23,45 @@ Dive into a world of seamless social connectivity with our user-friendly platfor
 - **React Query Integration:** Utilize React Query for efficient data fetching, auto caching, and first-class mutations.
 - **Backend as a Service (BaaS) - Appwrite:** Streamline backend development with Appwrite, offering authentication, database, file storage, and more.
 
+## 🤸 Quick Start
+
+Get up and running with the SnapGram Social Media App in just a few steps!
+
+### Prerequisites
+Make sure you have the following installed on your machine:
+- Git
+- Node.js
+- npm (Node Package Manager)
+
+### Cloning the Repository
+```bash
+git clone https://github.com/Nikhil-707/SnapGram_Social_Media_App
+cd SnapGram_Social_Media_App
+```
+
+### Installation
+Install the project dependencies using npm:
+```bash
+npm install
+```
+
+### Set Up Environment Variables
+Create a new file named `.env` in the root of your project and add the following content:
+```env
+VITE_APPWRITE_URL=
+VITE_APPWRITE_PROJECT_ID=
+VITE_APPWRITE_DATABASE_ID=
+VITE_APPWRITE_STORAGE_ID=
+VITE_APPWRITE_USER_COLLECTION_ID=
+VITE_APPWRITE_POST_COLLECTION_ID=
+VITE_APPWRITE_SAVES_COLLECTION_ID=
+```
+Replace the placeholder values with your actual Appwrite credentials. Obtain these credentials by signing up on the [Appwrite website](https://appwrite.io/).
+
+### Running the Project
+```bash
+npm start
+```
+
+Now you're all set to explore SnapGram! 🚀
+
