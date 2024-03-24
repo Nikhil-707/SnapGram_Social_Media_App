@@ -60,7 +60,7 @@ Replace the placeholder values with your actual Appwrite credentials. Obtain the
 
 ### Running the Project
 ```bash
-npm start
+npm run dev
 ```
 
 Now you're all set to explore SnapGram! 🚀
