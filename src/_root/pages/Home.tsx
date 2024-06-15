@@ -3,7 +3,7 @@ import PostCard from '@/components/ui/shared/PostCard';
 import UserCard from '@/components/ui/shared/UserCard';
 import { useGetRecentPosts, useGetUsers } from '@/lib/react-query/queriesAndMutations';
 import { Models } from 'appwrite';
-import React from 'react'
+
 
 const Home = () => {
   // const { toast } = useToast();
