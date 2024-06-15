@@ -1,7 +1,4 @@
-import React from 'react'
-
-const AllUsers = () => {
-  return (import Loader from "@/components/ui/shared/Loader";
+import Loader from "@/components/ui/shared/Loader";
 import UserCard from "@/components/ui/shared/UserCard";
 import { useToast } from "@/components/ui/use-toast";
 import { useGetUsers } from "@/lib/react-query/queriesAndMutations";
@@ -39,8 +36,3 @@ const AllUsers = () => {
 };
 
 export default AllUsers;
-    <div>AllUsers</div>
-  )
-}
-
-export default AllUsers
