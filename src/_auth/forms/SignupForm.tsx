@@ -1,10 +1,7 @@
-
-
 import { zodResolver } from "@hookform/resolvers/zod"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -21,17 +18,13 @@ import { useToast } from "@/components/ui/use-toast"
 import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queriesAndMutations"
 import { useUserContext } from "@/context/AuthContext"
 
-
 const SignupForm = () => {
-
-
   const { toast } = useToast()
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const { checkAuthUser } = useUserContext();
   const navigate = useNavigate();
 
   const { mutateAsync: createUserAccount, isPending: isCreatingAccount } = useCreateUserAccount();
-
-  const { mutateAsync: signInAccount, isPending: isSigningIn } = useSignInAccount();
+  const { mutateAsync: signInAccount } = useSignInAccount();
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof SignupValidation>>({
@@ -43,8 +36,6 @@ const SignupForm = () => {
       password: '',
     },
   })
-
-
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof SignupValidation>) {
@@ -76,8 +67,6 @@ const SignupForm = () => {
       return toast({ title: 'Sign up failed. Please try again.'})
     }
   }
-
-
 
   return (
     <Form {...form}>
@@ -155,17 +144,12 @@ const SignupForm = () => {
           </Button>
           <p className="text-small-regular text-light-2 text-center mt-2">
             Already have an account?
-            <Link to="/sign-in" className="text-primary-500
-            text-small-semibold ml-1">Log in</Link>
+            <Link to="/sign-in" className="text-primary-500 text-small-semibold ml-1">Log in</Link>
           </p>
-
-
         </form>
       </div>
     </Form>
   )
-
-
 }
 
 export default SignupForm
